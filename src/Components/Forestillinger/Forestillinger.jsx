@@ -13,7 +13,7 @@ export const Forestillinger = () => {
       const forestillinger = result.data.items
         .sort(() => Math.random() - 0.5)
         .slice(0, 1);
-      console.log(result.data.items);
+      //console.log(result.data.items);
       setForestillinger(forestillinger);
     };
     getData();

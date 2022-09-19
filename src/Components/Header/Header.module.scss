@@ -1,7 +1,11 @@
 header {
     display: grid;
     grid-template-columns: 40% 60%;
-    padding-top: 1em;
+    padding: 1em;
+    border-bottom: solid 1px lightgrey;
+    img {
+        width: 60%;
+    }
     .headerrightside {
         text-align: right;
         input, button {
