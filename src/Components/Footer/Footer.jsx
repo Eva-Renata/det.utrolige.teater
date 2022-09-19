@@ -4,6 +4,7 @@ import {
   AiFillInstagram,
   AiFillLinkedin,
 } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -36,9 +37,15 @@ export const Footer = () => {
           textAlign: "center",
         }}
       >
-        <AiFillFacebook />
-        <AiFillInstagram />
-        <AiFillLinkedin />
+        <Link>
+          <AiFillFacebook />
+        </Link>
+        <Link>
+          <AiFillInstagram />
+        </Link>
+        <Link>
+          <AiFillLinkedin />
+        </Link>
       </section>
       <section>
         <p>Find vej på kort </p>
