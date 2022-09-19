@@ -1,5 +1,5 @@
 import "./Main.module.scss";
 
-export const Main = () => {
-  return <main>main</main>;
+export const Main = (props) => {
+  return <main>{props.children}</main>;
 };

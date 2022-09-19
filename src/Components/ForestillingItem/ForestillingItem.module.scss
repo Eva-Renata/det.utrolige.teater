@@ -1,0 +1,41 @@
+.figurewrapper{
+    padding:2em;
+    width:90%;
+    margin: auto;
+    figure {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        border: solid 0.1em var(--secondarycolor);
+       .image {
+        background-size: cover;
+        border: solid 0.6em var(--secondarycolor);
+        background-position: center;
+       }
+       figcaption {
+        text-align: right;
+        padding:2em;
+        margin-top: 15vh;
+        p {
+            padding:1vh;
+            text-transform: uppercase;
+            font-size: 1.2vw;
+        }
+        .dates {
+            font-weight: bold;
+        }
+        h3 {
+            color: var(--primarycolor);
+            font-size: 2.5vw;
+            font-weight: lighter;
+            font-family: 'Playfair Display', serif;
+        }
+        h4 {
+            font-size: 2vw;
+            font-weight: lighter;
+            text-transform: uppercase;
+        }
+       }
+    }
+}
+
+
