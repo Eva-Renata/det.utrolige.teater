@@ -6,13 +6,16 @@ export const Navigation = () => {
     <nav>
       <ul>
         <li>
-          <NavLink to="/">Forside</NavLink>
+          <NavLink to="/">FORSIDE</NavLink>
         </li>
         <li>
-          <NavLink to="/produkter">Produkter</NavLink>
+          <NavLink to="/forestillingerevents">FORESTILLINGER & EVENTS</NavLink>
         </li>
         <li>
-          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/skuespillere">SKUESPILLERE</NavLink>
+        </li>
+        <li>
+          <NavLink to="/login">LOGIN</NavLink>
         </li>
       </ul>
     </nav>

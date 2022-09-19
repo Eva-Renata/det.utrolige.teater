@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Forside } from "../Pages/Forside/Forside";
-import { Produkter } from "../Pages/Produkter/Produkter";
+import { ForestillingerEvents } from "../Pages/ForestillingerEvents/ForestillingerEvents";
+import { Skuespillere } from "../Pages/Skuespillere/Skuespillere";
 import { Login } from "../Pages/Login/Login";
 import { NotFound } from "../Pages/NotFound/NotFound";
 
@@ -12,7 +13,11 @@ export const AppRouter = () => {
         <Route index element={<Forside />}></Route>
       </Route>
       <Route path="*" element={<NotFound />}></Route>
-      <Route path="/produkter" element={<Produkter />}></Route>
+      <Route
+        path="/forestillingerevents"
+        element={<ForestillingerEvents />}
+      ></Route>
+      <Route path="/skuespillere" element={<Skuespillere />}></Route>
       <Route path="/login" element={<Login />}></Route>
     </Routes>
   );
