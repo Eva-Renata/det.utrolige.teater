@@ -1,3 +1,9 @@
+//import fonter
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+//font-family: 'Playfair Display', serif;
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400&display=swap');
+
+//generelle styles 
 * {
     margin:0;
     padding:0;
@@ -6,4 +12,17 @@
         list-style: none;
         text-decoration: none;
     }
+    img {
+        width:100%;
+    }
+}
+:root {
+    --primarycolor: #D39D5B;
+    --secondarycolor: #AD7A51;
+    --tertiarycolor: #30454C; 
+}
+body {
+    font-family: 'Titillium Web', sans-serif;
+    width:90%;
+    margin:auto;
 }

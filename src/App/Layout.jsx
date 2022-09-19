@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Footer } from "../Components/Footer/Footer";
-import { Navigation } from "../Components/Nav/Navigation";
+import { Header } from "../Components/Header/Header";
 
 //function component Layout med props
 export const Layout = (props) => {
@@ -16,8 +16,8 @@ export const Layout = (props) => {
 
   return (
     <>
-      {/* sætter navigation og footer i Layout fordi den er en fast element på hele siden */}
-      <Navigation />
+      {/* sætter header og footer i Layout fordi den er en fast element på hele siden */}
+      <Header />
       <section>{props.children}</section>
       <Footer />
     </>
