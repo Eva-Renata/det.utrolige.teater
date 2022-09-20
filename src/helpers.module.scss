@@ -1,0 +1,39 @@
+//mixins/helpers
+@mixin h3 {
+    color: var(--primarycolor);
+    font-size: 2.5vw;
+    font-weight: lighter;
+    font-family: 'Playfair Display', serif;
+}
+@mixin h4 {
+    font-size: 2vw;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+@mixin backgroundimage {
+    background-size: cover;
+    background-position: center;
+}
+@mixin figureimage {
+    @include backgroundimage;
+    border: solid 0.6em var(--secondarycolor);
+}
+@mixin figcaption {
+    text-align: right;
+    padding: 2em;
+}
+@mixin button {
+    padding:0.7em;
+    color:white;
+    border:none;
+    font-weight: 800;
+    cursor: pointer;
+}
+@mixin seAllebutton {
+    @include button;
+        margin-bottom: 2em;
+        margin-left: 69vw;
+        width: 20vw;
+        background-color: var(--secondarycolor);
+        margin-top: 2em;
+}

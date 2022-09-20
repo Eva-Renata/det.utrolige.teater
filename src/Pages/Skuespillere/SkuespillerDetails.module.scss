@@ -1,0 +1,22 @@
+@import "../../helpers.module.scss";
+
+.detailsfigure {
+    display:grid;
+    grid-template-columns: 30% 70%;
+    border: solid 0.1em var(--secondarycolor);
+    padding: 1em;
+    figcaption {
+        padding:1em;
+        h4 {
+                @include h4;
+                margin-bottom: 1em;
+            }
+        p {
+            color: var(--primarycolor);
+            white-space: pre-wrap;
+        }
+    }
+}
+.seallebutton {
+    @include seAllebutton;
+}

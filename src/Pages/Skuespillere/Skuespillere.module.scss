@@ -1,0 +1,44 @@
+@import "../../helpers.module.scss";
+
+.skuespillerewrapper{
+    margin-bottom: 2em;
+figure {
+    display: grid;
+    grid-template-columns: 20% 65% 15%;
+    margin:1em;
+    padding:1em;
+    //border-bottom: solid 1px lightgrey;
+    //jeg foreslår ændring i design
+    border: solid 0.1em var(--secondarycolor);
+    img {
+        width: 13em;
+        height: 13em;
+        margin:auto;
+    }
+    svg {
+        height: 6em;
+        width: 6em;
+        margin:auto;
+    }
+
+    figcaption {
+        padding-left: 1em;
+        h4 {
+            @include h4;
+        }
+        p {
+            color: var(--primarycolor);
+            display: -webkit-box;
+            max-width: 60vw;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+        button {
+            @include button;
+            background-color: var(--tertiarycolor);
+            margin: 20vh 0 0 3vw;
+        }
+}
+}
