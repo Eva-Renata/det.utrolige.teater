@@ -11,11 +11,7 @@
     padding: 2em 0 2em 0;
 }
  .seallebutton {
-    @include button;
-    margin-bottom: 2em;
-    margin-left: 69vw;
-    width:20vw;
-    background-color: var(--secondarycolor);
+    @include seAllebutton;
  }
     
     

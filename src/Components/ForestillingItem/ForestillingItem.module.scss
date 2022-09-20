@@ -66,6 +66,9 @@
 
             .købbilletbutton {
                 background-color: var(--primarycolor);
+                &:hover {
+                    background-color: var(--secondarycolor);
+                }
             }
         }
     }
@@ -115,6 +118,9 @@
                 }
                 .købbilletbutton {
                     background-color: var(--primarycolor);
+                    &:hover {
+                            background-color: var(--secondarycolor);
+                        }
                 }
         }
     }

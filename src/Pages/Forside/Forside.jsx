@@ -3,6 +3,7 @@ import { Layout } from "../../App/Layout";
 import axios from "axios";
 import { ForestillingItem } from "../../Components/ForestillingItem/ForestillingItem";
 import styles from "./Forside.module.scss";
+import { NavLink } from "react-router-dom";
 
 //funktion komponent
 export const Forside = () => {
@@ -43,7 +44,11 @@ export const Forside = () => {
             type={"vertical"}
           ></ForestillingItem>
         </section>
-        <button className={styles.seallebutton}>SE ALLE FORESTILLINGER</button>
+        <NavLink to={"/forestillingerevents"}>
+          <button className={styles.seallebutton}>
+            SE ALLE FORESTILLINGER
+          </button>
+        </NavLink>
       </Layout>
     )
   );

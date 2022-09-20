@@ -5,8 +5,15 @@ import {
   AiFillLinkedin,
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { BsFillArrowUpSquareFill } from "react-icons/bs";
 
 export const Footer = () => {
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <footer>
       <section className={styles.infowrapper}>
@@ -55,6 +62,11 @@ export const Footer = () => {
         <p>Telefon: +45 96 31 80 90</p>
         <p>adm@dut.dk</p>
       </section>
+      <div></div>
+      <div className={styles.tilbage}>
+        <BsFillArrowUpSquareFill onClick={goToTop} />
+        <h3>Tilbage til top</h3>
+      </div>
     </footer>
   );
 };
