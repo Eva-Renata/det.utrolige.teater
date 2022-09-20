@@ -1,19 +1,16 @@
-.figurewrapper{
-    padding:2em;
-    width:90%;
-    margin: auto;
+@import "../../helpers.module.scss";
+
+//HERO style - figure vandret
+.herofigurewrapper{
     figure {
         display: grid;
         grid-template-columns: 40% 60%;
         border: solid 0.1em var(--secondarycolor);
        .image {
-        background-size: cover;
-        border: solid 0.6em var(--secondarycolor);
-        background-position: center;
+        @include figureimage;
        }
        figcaption {
-        text-align: right;
-        padding:2em;
+        @include figcaption;
         margin-top: 15vh;
         p {
             padding:1vh;
@@ -24,18 +21,102 @@
             font-weight: bold;
         }
         h3 {
-            color: var(--primarycolor);
-            font-size: 2.5vw;
-            font-weight: lighter;
-            font-family: 'Playfair Display', serif;
+         @include h3;
+        font-size: 3.5vw;
+        font-weight: 500;
         }
         h4 {
-            font-size: 2vw;
-            font-weight: lighter;
-            text-transform: uppercase;
+            @include h4;
         }
        }
     }
 }
 
+// figure lodret
+.verticalfigurewrapper{
+    figure {
+        border: solid 0.1em var(--secondarycolor);
+        .image {
+            width:100%;
+            height:45vh;
+            @include figureimage;
+            }
+        figcaption {
+            @include figcaption;
+            h3 {
+                @include h3;
+            }
+            h4 {
+                @include h4;
+            }
+            .dates {
+                font-weight: bold;
+            }
+            p {
+                text-transform: uppercase;
+                font-size: 1.2vw;
+            }
+            button {
+                @include button;
+                margin:1em 0 0 1em;
+            }
+            .læsmerebutton {
+                background-color: var(--tertiarycolor);
+            }
+
+            .købbilletbutton {
+                background-color: var(--primarycolor);
+            }
+        }
+    }
+}
+
+//oversigt figure style
+.oversigtfigurewrapper{
+    figure {
+        border: solid 0.1em var(--secondarycolor);
+        display: grid;
+        grid-template-columns: 13% 87%;
+        margin-bottom: 0.7em;
+        .image {
+            width:8em;
+            height:8em;
+            @include figureimage;
+
+        }
+        figcaption {
+            display:grid;
+            grid-template-columns: 25% 45% 30%;
+                h3 {
+                    @include h3;
+                    border-right: solid 1px lightgrey;
+                    margin:0.5em 0.5em 0.5em 0;
+                }
+                h4 {
+                    @include h4;
+                }
+                .dates {
+                    font-weight: bold;
+                }
+                .ptag{
+                    margin-top: 2em;
+                    p {
+                        text-transform: uppercase;
+                        font-size: 1.2vw;
+                    }
+                }
+                
+            button {
+                    @include button;
+                    margin: 3em 0 0 1em;
+                }
+                .læsmerebutton {
+                    background-color: var(--tertiarycolor);
+                }
+                .købbilletbutton {
+                    background-color: var(--primarycolor);
+                }
+        }
+    }
+}
 

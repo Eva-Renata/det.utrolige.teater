@@ -1,0 +1,21 @@
+@import "../../helpers.module.scss";
+
+.heroforestilling {
+    padding: 2em 0 2em 0;
+}
+
+.flereforestillinger {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1em;
+    padding: 2em 0 2em 0;
+}
+ .seallebutton {
+    @include button;
+    margin-bottom: 2em;
+    margin-left: 69vw;
+    width:20vw;
+    background-color: var(--secondarycolor);
+ }
+    
+    
