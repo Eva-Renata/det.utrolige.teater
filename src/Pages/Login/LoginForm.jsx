@@ -52,7 +52,10 @@ export const LoginForm = () => {
   return (
     <>
       {!loginData && !loginData.username ? (
-        <form onSubmit={handleSubmit(sendLoginRequest)}>
+        <form
+          onSubmit={handleSubmit(sendLoginRequest)}
+          className={styles.loginform}
+        >
           <input
             type="text"
             id="username"
