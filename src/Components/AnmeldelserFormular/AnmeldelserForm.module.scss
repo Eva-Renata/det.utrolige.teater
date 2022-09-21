@@ -1,0 +1,19 @@
+@import "../../helpers.module.scss";
+
+.anmeldelseform {
+    position: relative;
+    p {
+        padding: 0.5em 1em 0 0;
+    }
+    input{
+        width:35vw
+    }
+    button {
+        position: absolute;
+        right:-25vw;
+        top:10vh;
+        @include købbilletbutton;
+        border-radius: 4px;
+        margin-top:1em;
+    }
+}

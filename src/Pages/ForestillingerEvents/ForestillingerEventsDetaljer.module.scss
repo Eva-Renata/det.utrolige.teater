@@ -82,3 +82,18 @@ figure {
         font-weight: 300;
     }
 }
+.formwrapper {
+    display: flex;
+    background-color: var(--secondarycolor);
+    color:white;
+    padding-top:1em;
+    padding-bottom:1em;
+    svg {
+        height:2em;
+        width:2em;
+        margin: 0 1em 0 1em;
+    }
+    form {
+        margin-left:1vw;
+    }
+}

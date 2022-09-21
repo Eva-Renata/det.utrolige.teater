@@ -26,7 +26,7 @@ export const SkuespillerDetails = () => {
         <section>
           <h2>Skuespiller detaljer</h2>
           <figure className={styles.detailsfigure}>
-            <img src={skuespillerDetails.image} alt="skuespillerDetails" />
+            <img src={skuespillerDetails.image} alt={skuespillerDetails} />
             <figcaption>
               <h4>{skuespillerDetails.name}</h4>
               <p>{skuespillerDetails.description}</p>

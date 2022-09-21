@@ -7,6 +7,7 @@ import { AnmeldelserForm } from "../../Components/AnmeldelserFormular/Anmeldelse
 import { useAuth } from "../../App/Auth";
 import styles from "./ForestillingerEventsDetaljer.module.scss";
 import { LoginForm } from "../Login/LoginForm";
+import { TiDocumentText } from "react-icons/ti";
 
 export const ForestillingEventsDetaljer = () => {
   const [forestillinger, setForestillinger] = useState([]);
@@ -109,7 +110,22 @@ export const ForestillingEventsDetaljer = () => {
           <section className={styles.andmeldelsersection}>
             <h4>ANMELDELSER</h4>
             <Anmeldelser eventId={forestilling_id} />
-            {loginData ? <AnmeldelserForm /> : <LoginForm />}
+          </section>
+
+          {/* SKRIV ANMELDELSE/LOGIN SECTION */}
+          <section className={styles.formwrapper}>
+            <TiDocumentText />
+            <div>
+              <p> Skriv en anmeldelse</p>
+              {loginData ? (
+                <AnmeldelserForm />
+              ) : (
+                <>
+                  <p>Du skal være logget ind for at skrive en anmeldelse</p>
+                  <LoginForm />
+                </>
+              )}
+            </div>
           </section>
         </>
       ) : null}
