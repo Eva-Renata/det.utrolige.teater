@@ -1,11 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { Layout } from "../../App/Layout";
-import { ForestillingItem } from "../../Components/ForestillingItem/ForestillingItem";
+import { ForestillingEventItem } from "../../Components/ForestillingEventItem/ForestillingEventItem";
 import styles from "./ForestillingerEvents.module.scss";
 
 export const ForestillingerEvents = () => {
   const [forestillinger, setForestillinger] = useState([]);
+  const { forestilling_id } = useParams(0);
 
   useEffect(() => {
     const getData = async () => {
@@ -23,26 +25,27 @@ export const ForestillingerEvents = () => {
     forestillinger.length && (
       <Layout
         title="Forestillinger og Events"
-        description="Forestillinger og Events"
+        description="Forestillinger og Events "
       >
         {/* HERO */}
         <section className={styles.heroforestilling}>
-          <ForestillingItem
+          <ForestillingEventItem
             data={forestillinger[2]}
             type={"hero"}
-          ></ForestillingItem>
+          ></ForestillingEventItem>
         </section>
         <h2> Oversigt</h2>
         <section>
-          {/* mapper forestillinger med item component */}
+          {/* ALLE FORESTILLINGER OG EVENTS */}
           {forestillinger &&
             forestillinger.map((forestilling) => {
               return (
-                <ForestillingItem
+                <ForestillingEventItem
                   key={forestilling.id}
                   data={forestilling}
                   type="oversigt"
-                ></ForestillingItem>
+                  forestilling_id={forestilling_id}
+                ></ForestillingEventItem>
               );
             })}
         </section>

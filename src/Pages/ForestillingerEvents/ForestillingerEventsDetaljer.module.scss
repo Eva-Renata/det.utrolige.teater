@@ -1,0 +1,84 @@
+@import "../../helpers.module.scss";
+
+figure {
+    border-left: solid 1px var(--secondarycolor);
+    border-right: solid 1px var(--secondarycolor);
+    .image {
+        height:60vh;
+        @include figureimage;
+    }
+    .eventfigcaption {
+        padding:1em;
+        h4 {
+            @include h4;
+            font-weight: 300;
+        }
+        .uppersection {
+            display:flex;
+            justify-content: space-between;
+            padding-bottom: 0.5em;
+            border-bottom: solid 1px lightgray;
+            p {
+                text-transform: uppercase;
+                font-size: 1.3vw;
+            }
+        }
+        .midsection {
+            display: flex;
+            justify-content: space-between;
+            h3 {
+                @include h3;
+                font-size: 3.3vw;
+            }
+           
+            .købbilletbutton {
+                @include købbilletbutton;
+                background-color: var(--secondarycolor);
+                height:3.3em;
+            }
+        }
+        .descriptionp {
+            color: var(--primarycolor);
+            white-space: pre-wrap;
+        }
+        
+    }
+    
+}
+.actorsection {
+    border-left: solid 1px var(--secondarycolor);
+    border-right: solid 1px var(--secondarycolor);
+    padding: 1em;
+    border-bottom: dashed 2px var(--primarycolor);
+    h4 {
+        @include h4;
+        font-weight: 300;
+    }
+    .actorwrapper {
+        // display: flex;
+        // justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        .actorfigure {
+            width: 15vw;
+            border: solid 1px var(--secondarycolor);
+            margin-top: 1em;
+            figcaption{
+                p {
+                    text-transform: uppercase;
+                    color: var(--primarycolor);
+                    padding:0.5em;
+                }
+            }
+        }
+    }
+}
+.andmeldelsersection {
+    border-left: solid 1px var(--secondarycolor);
+    border-right: solid 1px var(--secondarycolor);
+    padding: 1em;
+    h4 {
+        @include h4;
+        font-weight: 300;
+    }
+}
