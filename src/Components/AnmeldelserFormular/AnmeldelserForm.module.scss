@@ -5,15 +5,22 @@
     p {
         padding: 0.5em 1em 0 0;
     }
-    input{
-        width:35vw
+    input, textarea {
+        width:35vw;
+        margin-top:1em;
+        font-size: 1em;
     }
+
     button {
         position: absolute;
-        right:-25vw;
-        top:10vh;
+        right:-20vw;
+        top:15vh;
         @include købbilletbutton;
         border-radius: 4px;
         margin-top:1em;
+    }
+    span {
+        color:black;
+        font-weight: bold;
     }
 }

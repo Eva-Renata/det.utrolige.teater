@@ -11,7 +11,6 @@ export const Anmeldelser = (props) => {
     const getData = async () => {
       const data = `https://api.mediehuset.net/detutroligeteater/reviews?event_id=${props.eventId}`;
       const result = await axios.get(data);
-      console.log(result.data.items);
       setAnmeldelser(result.data.items);
     };
     getData();
