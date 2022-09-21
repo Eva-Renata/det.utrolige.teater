@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
 import "./Navigation.module.scss";
+import { useAuth } from "../../App/Auth";
 
 export const Navigation = () => {
+  const { loginData } = useAuth();
   return (
     <nav>
       <ul>
@@ -15,7 +17,11 @@ export const Navigation = () => {
           <NavLink to="/skuespillere">SKUESPILLERE</NavLink>
         </li>
         <li>
-          <NavLink to="/login">LOGIN</NavLink>
+          {loginData ? (
+            <NavLink to="/minside">MIN SIDE</NavLink>
+          ) : (
+            <NavLink to="/login">LOGIN</NavLink>
+          )}
         </li>
       </ul>
     </nav>

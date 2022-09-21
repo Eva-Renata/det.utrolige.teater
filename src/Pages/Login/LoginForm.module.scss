@@ -1,0 +1,43 @@
+form {
+    width: 20vw;
+    margin: auto;
+    input {
+        width: 100%;
+        margin-top: 1em;
+        padding: 0.5em;
+        border: solid 1px grey;
+    }
+
+    .buttons {
+        margin-top: 1em;
+        button {
+            //background-color: var(--secondarycolor);
+            background-color: rgb(6, 187, 6);
+            color: white;
+            padding: 0.5em 1em 0.5em 1em;
+            margin-left: 6.5vw;
+            border: none;
+            cursor: pointer;
+            font-weight: bolder;
+        }
+    }
+}
+
+.loginfeedback {
+    text-align: center;
+    p {
+        font-weight: bolder;
+        padding: 1.5em;
+        color: var(--secondarycolor);
+    }
+
+    button {
+       // background-color: var(--secondarycolor);
+        background-color: rgb(6, 187, 6);
+        color: white;
+        padding: 0.5em 1em 0.5em 1em;
+        margin-right: 0.5em;
+        border: none;
+        cursor: pointer;
+    }
+}

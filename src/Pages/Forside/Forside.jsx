@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Layout } from "../../App/Layout";
 import axios from "axios";
-import { ForestillingItem } from "../../Components/ForestillingItem/ForestillingItem";
+import { ForestillingEventItem } from "../../Components/ForestillingEventItem/ForestillingEventItem";
 import styles from "./Forside.module.scss";
 import { NavLink } from "react-router-dom";
 
@@ -24,25 +24,28 @@ export const Forside = () => {
     //printer forestillinger i item componenter, med forskellige styles.
     forestillinger.length && (
       <Layout title="Forside" description="Forsiden af Det utrolige teater">
+        {/* HERO */}
         <section className={styles.heroforestilling}>
-          <ForestillingItem
+          <ForestillingEventItem
             data={forestillinger[0]}
             type={"hero"}
-          ></ForestillingItem>
+          ></ForestillingEventItem>
         </section>
+
+        {/* TRE FORESTILLINGER */}
         <section className={styles.flereforestillinger}>
-          <ForestillingItem
+          <ForestillingEventItem
             data={forestillinger[1]}
             type={"vertical"}
-          ></ForestillingItem>
-          <ForestillingItem
+          ></ForestillingEventItem>
+          <ForestillingEventItem
             data={forestillinger[2]}
             type={"vertical"}
-          ></ForestillingItem>
-          <ForestillingItem
+          ></ForestillingEventItem>
+          <ForestillingEventItem
             data={forestillinger[3]}
             type={"vertical"}
-          ></ForestillingItem>
+          ></ForestillingEventItem>
         </section>
         <NavLink to={"/forestillingerevents"}>
           <button className={styles.seallebutton}>

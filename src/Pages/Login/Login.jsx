@@ -1,10 +1,20 @@
+import { useAuth } from "../../App/Auth";
 import { Layout } from "../../App/Layout";
-import "./Login.module.scss";
-
+import { LoginForm } from "./LoginForm";
+import { useNavigate } from "react-router-dom";
 export const Login = () => {
+  const { loginData } = useAuth();
+  const navigate = useNavigate();
+
+  if (loginData) {
+    navigate("/minside");
+  }
   return (
     <Layout title="Login" description="Side til login">
-      <h2>login side</h2>
+      <section>
+        <h2>Login</h2>
+        <LoginForm />
+      </section>
     </Layout>
   );
 };
