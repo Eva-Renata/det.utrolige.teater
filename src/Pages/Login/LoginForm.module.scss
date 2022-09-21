@@ -11,12 +11,12 @@
     .buttons {
         margin-top: 1em;
         button {
-            //background-color: var(--secondarycolor);
-            background-color: rgb(6, 187, 6);
+            background-color: var(--secondarycolor);
+            //background-color: rgb(6, 187, 6);
             color: white;
             padding: 0.5em 1em 0.5em 1em;
             margin-left: 6.5vw;
-            border: none;
+            border: solid 1px black;
             cursor: pointer;
             font-weight: bolder;
         }
@@ -32,8 +32,8 @@
     }
 
     button {
-       // background-color: var(--secondarycolor);
-        background-color: rgb(6, 187, 6);
+       background-color: var(--secondarycolor);
+       // background-color: rgb(6, 187, 6);
         color: white;
         padding: 0.5em 1em 0.5em 1em;
         margin-right: 0.5em;

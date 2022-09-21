@@ -93,7 +93,7 @@ export const AnmeldelserForm = () => {
           />
           {errors.stars && <span>Du skal vælge stjerner!</span>}
         </div>
-        <div>
+        <div className={styles.anminput}>
           {/* Register adds the inputs to the form data */}
           <input
             type="text"

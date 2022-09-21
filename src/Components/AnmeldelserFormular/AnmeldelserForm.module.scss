@@ -6,7 +6,7 @@
         padding: 0.5em 1em 0 0;
     }
     input, textarea {
-        width:35vw;
+        width:40vw;
         margin-top:1em;
         font-size: 1em;
     }
@@ -22,5 +22,8 @@
     span {
         color:black;
         font-weight: bold;
+    }
+    .anminput {
+        width:40vw;
     }
 }
