@@ -2,6 +2,10 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../App/Auth";
 import { Layout } from "../../App/Layout";
 import styles from "./MinSide.module.scss";
+import { BsFillStarFill } from "react-icons/bs";
+import { ImTicket } from "react-icons/im";
+import { FaHeart } from "react-icons/fa";
+import { MineAnmeldelser } from "../../Components/MinSideComponents/MineAnmeldelser";
 
 export const MinSide = () => {
   // Destructer vars fra useAuth
@@ -17,8 +21,8 @@ export const MinSide = () => {
 
   return (
     <Layout title="Min side" description="Min side og bruger detaljer">
-      <section className={styles.minsidesection}>
-        <div className={styles.uppersection}>
+      <div className={styles.minsidewrapper}>
+        <section className={styles.uppersection}>
           <h3>MinSide</h3>
 
           {/* Vis logindata hvis bruger er logget ind */}
@@ -26,8 +30,30 @@ export const MinSide = () => {
             <p>Du er logget ind som {loginData.username}</p>
             <button onClick={logOut}>LOG UD</button>
           </div>
-        </div>
-      </section>
+        </section>
+        <section className={styles.mineReservationer}>
+          <h4>
+            {" "}
+            <ImTicket />
+            MINE RESERVATIONER
+          </h4>
+        </section>
+        <section className={styles.mineFavoritter}>
+          <h4>
+            {" "}
+            <FaHeart />
+            MINE FAVORITTER
+          </h4>
+        </section>
+        <section className={styles.mineAnmeldelser}>
+          <h4>
+            {" "}
+            <BsFillStarFill />
+            MINE ANMELDELSER
+          </h4>
+          <MineAnmeldelser />
+        </section>
+      </div>
     </Layout>
   );
 };

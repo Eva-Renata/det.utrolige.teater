@@ -1,11 +1,11 @@
 @import "../../helpers.module.scss";
  
-.minsidesection {
+.minsidewrapper {
+        border: solid 1px var(--primarycolor);
     .uppersection {
         display: flex;
         justify-content: space-between;
         margin-top:1em;
-        border: solid 1px var(--primarycolor);
         padding:1em;
         h3 {
             @include h3;
@@ -17,4 +17,11 @@
             background-color: var(--secondarycolor)
         }
   }
+ h4 {
+    @include h4;
+ }
+ svg {
+    color: var(--secondarycolor);
+    margin:1em 0.5em 0 1em;
+ }
 }

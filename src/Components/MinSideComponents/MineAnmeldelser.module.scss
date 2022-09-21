@@ -1,0 +1,44 @@
+table {
+    width:95%;
+    margin:auto;
+    text-align: left;
+    border-collapse: collapse;
+    .anmelselserTablehead {
+        border-bottom: solid 1px lightgrey;
+        th {
+            text-transform: uppercase;
+            padding: 1em 0 0.5em 0;
+        }
+        }
+    tbody {
+    td {
+        border-bottom: solid 1px lightgrey;
+    }
+    .editbutton {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        svg {
+            color: rgb(4, 181, 4);
+            margin:0;
+            font-size: 1.8em;
+            &:hover{
+                color: green;
+            }
+        }
+
+    }
+    .deletebutton {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        svg {
+            color: red;
+            font-size: 1.8em;
+            &:hover {
+                    color: rgb(147, 6, 6);
+                }
+        }
+    }
+}
+}
