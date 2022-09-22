@@ -6,8 +6,8 @@ import { Skuespillere } from "../Pages/Skuespillere/Skuespillere";
 import { Login } from "../Pages/Login/Login";
 import { NotFound } from "../Pages/NotFound/NotFound";
 import { SkuespillerDetails } from "../Pages/Skuespillere/SkuespillerDetails";
-import { Anmeldelser } from "../Components/Anmeldelser/Anmeldelser";
 import { MinSide } from "../Pages/MinSide/MinSide";
+import { AnmeldelseEditForm } from "../Components/AnmeldelserFormular/AnmedelseEditForm";
 
 //alle routes på siden
 export const AppRouter = () => {
@@ -18,7 +18,7 @@ export const AppRouter = () => {
       </Route>
       <Route path="*" element={<NotFound />}></Route>
 
-      {/* forestillinger og events routes */}
+      {/* FORESTILLINGER OG EVENTS ROUTES */}
       <Route path="/forestillingerevents">
         <Route index element={<ForestillingerEvents />}></Route>
         <Route
@@ -27,19 +27,18 @@ export const AppRouter = () => {
         ></Route>
       </Route>
 
-      {/* skuespillere routes */}
+      {/* SKUESPILLERE ROUTES */}
       <Route path="/skuespillere">
         <Route index element={<Skuespillere />}></Route>
         <Route path=":skuespiller_id" element={<SkuespillerDetails />}></Route>
       </Route>
 
-      <Route
-        path="/forestillingerevents/:forestilling_id/anmeldelser"
-        element={<Anmeldelser />}
-      ></Route>
-
       <Route path="/login" element={<Login />}></Route>
       <Route path="/minside" element={<MinSide />}></Route>
+      <Route
+        path="/anmedelser/edit/:anmedelse_id"
+        element={<AnmeldelseEditForm />}
+      ></Route>
     </Routes>
   );
 };

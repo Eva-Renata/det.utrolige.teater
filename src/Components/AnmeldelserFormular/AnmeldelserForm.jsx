@@ -109,7 +109,7 @@ export const AnmeldelserForm = () => {
           />
           {errors.comment && <span>Du skal indtaste Kommentar!</span>}
         </div>
-        <button>SEND</button>
+        <button className={styles.anmeldelseSENDbtn}>SEND</button>
       </form>
     </section>
   );

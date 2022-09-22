@@ -4,7 +4,7 @@ import { useAuth } from "../../App/Auth";
 import ReactStars from "react-rating-stars-component";
 import { GoPencil } from "react-icons/go";
 import { TiDelete } from "react-icons/ti";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { confirmAlert } from "react-confirm-alert";
 import styles from "./MineAnmeldelser.module.scss";
 import "./ConfirmStyles.scss";
@@ -18,11 +18,11 @@ export const MineAnmeldelser = () => {
     const getData = async () => {
       const data = `https://api.mediehuset.net/detutroligeteater/reviews`;
       const result = await axios.get(data);
-      //console.log(result.data.items);
-      //sætter anmeldelser og filtrerer efter bruger_id
+      //console.log(result.data.items)
+      //sætter anmeldelser og filtrerer efter bruger_id (mine)
       setAnmeldelser(
         result.data.items.filter((anmeldelse) => {
-          return anmeldelse.user_id == loginData.user_id;
+          return Number(anmeldelse.user_id) === loginData.user_id;
         })
       );
     };
@@ -37,8 +37,9 @@ export const MineAnmeldelser = () => {
       },
     };
 
+    //sikkerheds confirm
     confirmAlert({
-      title: "Er du sikker på, at du vil slette denne kommentar?",
+      message: "Er du sikker på, at du vil slette denne kommentar?",
       buttons: [
         {
           label: "Ja",
@@ -50,6 +51,7 @@ export const MineAnmeldelser = () => {
       ],
     });
 
+    //slet funktion, kører kun, hvis du bekræfter
     const Delete = async () => {
       const endpoint = `https://api.mediehuset.net/detutroligeteater/reviews/${anmeldelse_id}`;
       const result = await axios.delete(endpoint, options);
@@ -88,7 +90,11 @@ export const MineAnmeldelser = () => {
                   </td>
                   <td>
                     <button className={styles.editbutton}>
-                      <GoPencil />
+                      <span title="Rediger">
+                        <Link to={`/anmedelser/edit/${anmeldelse.id}`}>
+                          <GoPencil />
+                        </Link>
+                      </span>
                     </button>
                     <button
                       className={styles.deletebutton}

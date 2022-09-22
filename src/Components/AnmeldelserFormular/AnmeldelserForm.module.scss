@@ -2,6 +2,8 @@
 
 .anmeldelseform {
     position: relative;
+    background-color: var(--secondarycolor);
+    padding:1em;
     p {
         padding: 0.5em 1em 0 0;
     }
@@ -11,10 +13,10 @@
         font-size: 1em;
     }
 
-    button {
+    .anmeldelseSENDbtn {
         position: absolute;
-        right:-20vw;
-        top:15vh;
+        right:-6vw;
+        top:18vh;
         @include købbilletbutton;
         border-radius: 4px;
         margin-top:1em;
@@ -25,5 +27,13 @@
     }
     .anminput {
         width:40vw;
+    }
+    .anmeldelseEDITbtn{
+        @include købbilletbutton;
+            border-radius: 4px;
+            margin-top: 1em;
+            position: absolute;
+            right:41vw;
+            top:18vh;
     }
 }
