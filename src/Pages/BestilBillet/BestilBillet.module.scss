@@ -1,0 +1,92 @@
+@import "../../helpers.module.scss";
+
+form {
+    padding-top: 1em;
+
+    .bestilbilletwrapper {
+        border-top: solid 1px var(--primarycolor);
+        border-left: solid 1px var(--primarycolor);
+        border-right: solid 1px var(--primarycolor);
+        border-bottom: dashed 2px var(--primarycolor);
+        padding-bottom: 1em;
+        .købfigure {
+            border:none;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            text-align: right;
+            .image {
+                height: 60vh;
+                @include figureimage;
+            }
+        }
+        figcaption {
+            padding:1em;
+            h3 {
+                @include h3;
+                font-size: 4vw;
+                padding-bottom: 0.3em;
+                border-bottom: solid 1px lightgray;
+            }
+            h4 {
+                @include h4;
+                font-weight: 300;
+                padding-bottom: 1em;
+            }
+            h5 {
+                @include h4;
+                font-weight: 600;
+                padding-top: 1em;
+            }
+            .inputswrapper {
+                .flexeddiv {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    padding:0.5em;
+                    label {
+                        padding:0.5em;
+                    }
+                    input {
+                        border: solid 1px lightgray;
+                        border-radius: 4px;
+                        width:100%;
+                    }                       
+                }
+            }
+        }
+    }
+    .seats {
+        border-left: solid 1px var(--primarycolor);
+        border-right: solid 1px var(--primarycolor);
+        border-bottom: solid 2px var(--primarycolor);
+        h3 {
+            color:white;
+            background-color: var(--secondarycolor);
+            padding:0.5em;
+            margin:1em;
+            text-align: center;
+        }
+        .seatsdisplaysection {
+          width:30%;
+            margin:auto;
+            input{
+                height:2em;
+                width:3em;
+                //border-radius: 50%;
+                &:checked {
+                    outline: 2px solid var(--secondarycolor);
+                }
+                .checkmark {
+                    background-color: red;
+                }
+            }
+        }
+                
+    }
+        .købbilletbutton {
+            @include købbilletbutton;
+            background-color: var(--secondarycolor);
+            height: 3.3em;
+            margin:1em;
+            margin-left: 70vw;
+        }
+}

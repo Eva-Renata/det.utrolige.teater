@@ -58,8 +58,9 @@ export const ForestillingEventItem = (props) => {
           <NavLink to={`/forestillingerevents/${forestilling.id}`}>
             <button className={styles.læsmerebutton}>LÆS MERE</button>
           </NavLink>
-
-          <button className={styles.købbilletbutton}>KØB BILLET</button>
+          <NavLink to={`/forestillingerevents/${forestilling.id}/bestil`}>
+            <button className={styles.købbilletbutton}>KØB BILLET</button>
+          </NavLink>{" "}
         </figcaption>
       </figure>
     </section>
@@ -87,7 +88,9 @@ export const ForestillingEventItem = (props) => {
               <button className={styles.læsmerebutton}>LÆS MERE</button>
             </NavLink>
 
-            <button className={styles.købbilletbutton}>KØB BILLET</button>
+            <NavLink to={`/forestillingerevents/${forestilling.id}/bestil`}>
+              <button className={styles.købbilletbutton}>KØB BILLET</button>
+            </NavLink>
           </div>
         </figcaption>
       </figure>

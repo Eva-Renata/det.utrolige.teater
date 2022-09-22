@@ -9,6 +9,7 @@ import { SkuespillerDetails } from "../Pages/Skuespillere/SkuespillerDetails";
 import { MinSide } from "../Pages/MinSide/MinSide";
 import { AnmeldelseEditForm } from "../Components/AnmeldelserFormular/AnmedelseEditForm";
 import { SearchResult } from "../Components/SearchBar/SearchResult";
+import BestilBillet from "../Pages/BestilBillet/BestilBillet";
 
 //alle routes på siden
 export const AppRouter = () => {
@@ -25,6 +26,10 @@ export const AppRouter = () => {
         <Route
           path=":forestilling_id"
           element={<ForestillingEventsDetaljer />}
+        ></Route>
+        <Route
+          path=":forestilling_id/bestil"
+          element={<BestilBillet />}
         ></Route>
       </Route>
 

@@ -72,12 +72,14 @@ export const ForestillingEventsDetaljer = () => {
                   <h3>{forestillinger.title}</h3>
                   <h4>{forestillinger.genre}</h4>
                 </div>
-                <button
-                  className={styles.købbilletbutton}
-                  style={{ marginTop: "1em" }}
-                >
-                  KØB BILLET
-                </button>
+                <NavLink to={`/forestillingerevents/${forestilling_id}/bestil`}>
+                  <button
+                    className={styles.købbilletbutton}
+                    style={{ marginTop: "1em" }}
+                  >
+                    KØB BILLET
+                  </button>
+                </NavLink>
               </section>
 
               <p className={styles.descriptionp}>
