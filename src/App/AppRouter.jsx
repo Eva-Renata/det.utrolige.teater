@@ -8,6 +8,7 @@ import { NotFound } from "../Pages/NotFound/NotFound";
 import { SkuespillerDetails } from "../Pages/Skuespillere/SkuespillerDetails";
 import { MinSide } from "../Pages/MinSide/MinSide";
 import { AnmeldelseEditForm } from "../Components/AnmeldelserFormular/AnmedelseEditForm";
+import { SearchResult } from "../Components/SearchBar/SearchResult";
 
 //alle routes på siden
 export const AppRouter = () => {
@@ -39,6 +40,9 @@ export const AppRouter = () => {
         path="/anmedelser/edit/:anmedelse_id"
         element={<AnmeldelseEditForm />}
       ></Route>
+
+      {/* ROUTE TIL SEARCH */}
+      <Route path="/search" element={<SearchResult />}></Route>
     </Routes>
   );
 };

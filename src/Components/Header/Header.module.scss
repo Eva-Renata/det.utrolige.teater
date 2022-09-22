@@ -6,17 +6,5 @@ header {
     img {
         width: 60%;
     }
-    .headerrightside {
-        text-align: right;
-        input, button {
-            border:none;
-            border-bottom: solid 1px lightgrey;
-            background-color: transparent;
-            padding:0.5em;
-            color: var(--tertiarycolor);
-        }
-        button {
-            cursor: pointer;
-        }
-    }
+    
 }
