@@ -11,6 +11,10 @@ export const MineFavoritter = () => {
   const { loginData } = useAuth();
 
   useEffect(() => {
+    //tjekker loginData, ellers så fejler ved reload !!
+    if (!loginData) {
+      return;
+    }
     const getData = async () => {
       const url = `https://api.mediehuset.net/detutroligeteater/favorites`;
       //brug for token til favoritter
@@ -24,7 +28,7 @@ export const MineFavoritter = () => {
       setFavoriter(result.data.items);
     };
     getData();
-  }, [loginData.access_token]);
+  }, [loginData]);
 
   //slet funktion
   const removeFavorit = async (favoritter_id) => {
