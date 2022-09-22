@@ -93,7 +93,11 @@ figure {
         width:2em;
         margin: 0 1em 0 1em;
     }
-    form {
-        margin-left:1vw;
-    }
+}
+svg {
+    //padding:0.5em;
+    height: 1.5em;
+    width: 1.5em;
+    margin: 0 1em 0 1em;
+    color:var(--primarycolor);
 }

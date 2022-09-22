@@ -8,6 +8,7 @@ import { useAuth } from "../../App/Auth";
 import styles from "./ForestillingerEventsDetaljer.module.scss";
 import { LoginForm } from "../Login/LoginForm";
 import { TiDocumentText } from "react-icons/ti";
+import { FavoriterIcon } from "./FavoriterIcon";
 
 export const ForestillingEventsDetaljer = () => {
   const [forestillinger, setForestillinger] = useState([]);
@@ -19,7 +20,7 @@ export const ForestillingEventsDetaljer = () => {
       const result = await axios.get(
         `https://api.mediehuset.net/detutroligeteater/events/${forestilling_id}`
       );
-      console.log(result.data.item);
+      //console.log(result.data.item);
       setForestillinger(result.data.item);
     };
     getData();
@@ -50,7 +51,9 @@ export const ForestillingEventsDetaljer = () => {
               style={{
                 backgroundImage: `url(${forestillinger.image_large})`,
               }}
-            ></div>
+            >
+              {loginData && <FavoriterIcon />}
+            </div>
             <figcaption className={styles.eventfigcaption}>
               <section className={styles.uppersection}>
                 <div>

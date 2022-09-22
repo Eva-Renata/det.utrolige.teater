@@ -1,0 +1,26 @@
+table {
+    width:95%;
+    margin: auto;
+    border-collapse: collapse;
+    .favoritterThead {
+        border-bottom: solid 1px lightgrey;
+        tr {
+            th {
+                text-transform: uppercase;
+                padding: 1em 0 0.5em 0;
+            }
+        }
+    }
+.deletebutton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    svg {
+        color: red;
+        font-size: 1.8em;
+        &:hover {
+            color: rgb(147, 6, 6);
+        }
+    }
+}
+}

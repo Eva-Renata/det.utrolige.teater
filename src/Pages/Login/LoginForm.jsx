@@ -36,9 +36,34 @@ export const LoginForm = () => {
   };
 
   // Definerer funktion til at håndtere form data til session storage
-  const handleSessionData = (data) => {
+  const handleSessionData = async (data) => {
     if (data) {
       sessionStorage.setItem("token", JSON.stringify(data));
+      const options = {
+        headers: {
+          Authorization: `Bearer ${data.access_token}`,
+        },
+      };
+      // fetch favoriter
+      const favoriter = await axios.get(
+        "https://api.mediehuset.net/detutroligeteater/favorites",
+        options
+      );
+
+      if (!favoriter.data.error) {
+        sessionStorage.setItem(
+          "favorites",
+          JSON.stringify(
+            favoriter.data.items.map((favorit) => {
+              return favorit.event_id;
+            })
+          )
+        );
+      } else {
+        //add empty favorites array in session storage
+        // if we don't have any yet
+        sessionStorage.setItem("favorites", JSON.stringify([]));
+      }
       setLoginData(data);
     }
   };

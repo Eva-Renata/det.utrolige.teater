@@ -6,6 +6,7 @@ import { BsFillStarFill } from "react-icons/bs";
 import { ImTicket } from "react-icons/im";
 import { FaHeart } from "react-icons/fa";
 import { MineAnmeldelser } from "../../Components/MinSideComponents/MineAnmeldelser";
+import { MineFavoritter } from "../../Components/MinSideComponents/MineFavoritter";
 
 export const MinSide = () => {
   // Destructer vars fra useAuth
@@ -44,6 +45,7 @@ export const MinSide = () => {
             <FaHeart />
             MINE FAVORITTER
           </h4>
+          <MineFavoritter />
         </section>
         <section className={styles.mineAnmeldelser}>
           <h4>
