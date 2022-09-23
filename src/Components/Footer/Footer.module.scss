@@ -30,3 +30,24 @@ footer {
         }
     }
 }
+
+//MEDIAQUERIES TABLET
+@media only screen and (max-width: 1100px) {
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+//MEDIAQUERIES MOBIL
+@media only screen and (max-width: 750px) {
+footer {
+        display: block;
+        text-align: center;
+        section {
+            border-bottom: solid 1px lightgrey;
+            padding:1em;
+        }
+        
+    }
+}

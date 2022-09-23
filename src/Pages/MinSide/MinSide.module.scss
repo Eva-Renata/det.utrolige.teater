@@ -25,3 +25,18 @@
     margin:1em 0.5em 0 1em;
  }
 }
+
+//MEDIAQUERIES MOBIL
+@media only screen and (max-width: 750px) {
+    .minsidewrapper {
+        .uppersection{
+            h3 {
+                    font-size: 2em;
+                }
+        }
+        
+        h4 {
+            font-size: 1.5em;
+        }
+    }
+}

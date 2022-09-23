@@ -8,9 +8,9 @@
     figcaption {
         padding:1em;
         h4 {
-                @include h4;
-                margin-bottom: 1em;
-            }
+            @include h4;
+            margin-bottom: 1em;
+        }
         p {
             color: var(--primarycolor);
             white-space: pre-wrap;
@@ -19,4 +19,29 @@
 }
 .seallebutton {
     @include seAllebutton;
+}
+
+//MEDIAQUERIES MOBIL
+@media only screen and (max-width: 750px) {
+    .detailsfigure {
+        display: block;
+        img {
+            width:50vw;
+            height:50vw;
+            margin:auto;
+            display: block;
+        }
+        figcaption {
+            h4 {
+                font-size: 3em;
+                text-align: center;
+                margin-bottom: 0.5em;
+            }
+        }
+        
+    }
+    .seallebutton {
+        margin-left: 20vw;
+        width: 50vw;
+    }
 }

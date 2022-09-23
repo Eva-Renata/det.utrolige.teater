@@ -90,3 +90,31 @@ form {
             margin-left: 70vw;
         }
 }
+
+
+//MEDIAQUERIES MOBIL
+@media only screen and (max-width: 750px) {
+    form {
+        .bestilbilletwrapper{
+            .købfigure {
+                display: block;
+            }
+            figcaption {
+                h3 {
+                    font-size: 3em;
+                }
+                h5{
+                    font-size: 1.5em;
+                }
+                h4 {
+                    font-size: 1em;
+                }
+            }
+        }
+        .købbilletbutton {
+            margin-left: 8em;
+            
+        }
+    }
+        
+}

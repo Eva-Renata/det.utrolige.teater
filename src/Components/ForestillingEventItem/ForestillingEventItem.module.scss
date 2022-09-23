@@ -124,3 +124,88 @@
     }
 }
 
+
+//MEDIAQUERIES MOBIL
+@media only screen and (max-width: 750px) {
+
+    //HERO style - figure vandret
+    .herofigurewrapper {
+            figure {
+                figcaption {
+                    text-align: center;
+                    margin-top: 1em;
+                    p {
+                        padding: 1vh;
+                        text-transform: uppercase;
+                        font-size: 2.5vw;
+                    }
+                    .dates {
+                        font-weight: bold;
+                    }
+                    h3 {
+                        font-size: 4vw;
+                    }
+                    h4 {
+                        font-size: 3vw;
+                    }
+                }
+        }
+    }
+
+    // figure lodret
+    .verticalfigurewrapper {
+        figure {
+            figcaption {
+                text-align: center;
+                padding:1em;
+                font-size: 2em;
+                p {
+                    padding: 1vh;
+                    text-transform: uppercase;
+                    font-size: 2.5vw;
+                }
+            
+                .dates {
+                    font-weight: bold;
+                }
+            
+                h3 {
+                    font-size: 5vw;
+                }
+            
+                h4 {
+                    font-size: 3vw;
+                }
+            }
+        }
+    }
+
+//oversigt figure style
+.oversigtfigurewrapper {
+    figure {
+        display:block;
+        .image {
+                width: 15em;
+                height: 10em;
+                margin: auto;
+        }
+    figcaption {
+        display: block;
+        text-align: center;
+        h3 {
+            border-right:none;
+            font-size: 5vw;
+        }
+        .ptag {
+            margin-top:0;
+            p{
+                font-size: 2.5vw;
+            }
+        }
+        button{
+            margin-bottom: 1em;
+        }
+    }
+    }
+}
+}

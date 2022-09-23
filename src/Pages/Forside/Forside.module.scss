@@ -14,4 +14,22 @@
     @include seAllebutton;
  }
     
-    
+
+//MEDIAQUERIES TABLET
+@media only screen and (max-width: 1100px) {
+    .seallebutton {
+        margin-left: 35vw;
+    }
+}
+
+//MEDIAQUERIES MOBIL
+@media only screen and (max-width: 750px) {
+    .flereforestillinger {
+        display: block;
+    }
+    .seallebutton {
+        margin-left: 20vw;
+        width:50vw;
+    }
+}
+

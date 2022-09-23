@@ -42,3 +42,42 @@ figure {
         }
 }
 }
+
+//MEDIAQUERIES TABLET
+@media only screen and (max-width: 1100px) {
+.skuespillerewrapper {
+    margin-bottom: 2em;
+    figure {
+        display: grid;
+        grid-template-columns: 25% 45% 20%;
+        figcaption {
+            width: 60vw;
+        }
+        button {
+            margin-top:23vh;
+        }
+    }
+}
+}
+
+//MEDIAQUERIES MOBIL
+@media only screen and (max-width: 750px) {
+    .skuespillerewrapper {
+            figure {
+                display: block;
+                figcaption {
+                    h4 {
+                        font-size: 2em;
+                        width:5vw;
+                    }
+                    p {
+                        display: none;
+                    }
+                    
+                }
+                button {
+                    margin-top: 1em;
+                }
+            }
+        }
+}
